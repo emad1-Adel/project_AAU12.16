@@ -93,9 +93,9 @@ export const Header = () => {
             </motion.div>
             <div className={`transition-all duration-500 ${isScrolled ? 'text-foreground' : 'text-white text-shadow'}`}>
               <h1 className="text-xl font-display font-bold leading-tight group-hover:text-secondary transition-colors">
-                {t('جامعة الجيل الجديد', 'New Generation University')}
+                {t('جامعة الجيل الجديد', 'Al JEEL AL JADEED UNIVERSITU')}
               </h1>
-              <p className="text-xs text-secondary font-semibold">NGU</p>
+              <p className="text-xs text-secondary font-semibold">AAU</p>
             </div>
           </motion.button>
 

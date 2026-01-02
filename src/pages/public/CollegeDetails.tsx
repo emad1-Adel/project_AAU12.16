@@ -68,7 +68,7 @@ export default function CollegeDetails() {
         </div>
         
         <div className="container mx-auto px-4 h-full flex flex-col justify-end pb-12 relative z-10">
-          <div className="mb-6">
+          <div className="mb-6 flex items-center justify-between">
             <Breadcrumb
               items={[
                 { label: { ar: 'الكليات', en: 'Colleges' }, href: '/colleges' },
@@ -90,6 +90,36 @@ export default function CollegeDetails() {
           </div>
         </div>
       </div>
+
+      {/* Dean Card (horizontal, under college title) */}
+      {college.dean && (
+        <div className="container mx-auto px-4 -mt-12 z-20 relative">
+          <Card className="mb-8 backdrop-blur-sm border-border/40 shadow-lg">
+            <CardContent>
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                <div className="w-full md:w-48 h-36 rounded-lg overflow-hidden border-2 border-primary shadow-md flex-shrink-0">
+                  <img src={college.dean.image} alt={t(college.dean.nameAr, college.dean.nameEn)} className="w-full h-full object-cover" />
+                </div>
+
+                <div className="flex-1">
+                  <div className="text-xl md:text-2xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight">
+                    {t(college.dean.nameAr, college.dean.nameEn)}
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-1">{t(college.dean.titleAr || 'عميد الكلية', college.dean.titleEn || 'Dean')}</div>
+                  <p className="text-muted-foreground mt-3 max-w-3xl">{t(college.descriptionAr, college.descriptionEn)}</p>
+
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <Button asChild size="sm" variant="secondary">
+                      <Link to={`/faculty/${college.dean.id}`}>{t('عرض الملف', 'View Profile')}</Link>
+                    </Button>
+                    <Button size="sm" variant="outline">{t('تواصل', 'Contact')}</Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
       <div className="container mx-auto px-4 py-12">
         {/* Quick Stats */}
@@ -144,6 +174,8 @@ export default function CollegeDetails() {
             </CardContent>
           </Card>
         </div>
+
+        
 
         {/* Programs */}
         <Card className="mb-12 overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -246,27 +278,28 @@ export default function CollegeDetails() {
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {facultyMembers.map((member) => (
-                  <div 
-                    key={member.id} 
-                    className="group p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xl font-bold">
-                        {member.image ? (
-                          <img src={member.image} alt={t(member.nameAr, member.nameEn)} className="w-full h-full rounded-full object-cover" />
-                        ) : (
-                          t(member.nameAr, member.nameEn).charAt(0)
-                        )}
+                  <Link key={member.id} to={`/faculty/${member.id}`}>
+                    <div 
+                      className="group p-6 rounded-2xl border bg-card hover:shadow-lg transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xl font-bold">
+                          {member.image ? (
+                            <img src={member.image} alt={t(member.nameAr, member.nameEn)} className="w-full h-full rounded-full object-cover" />
+                          ) : (
+                            t(member.nameAr, member.nameEn).charAt(0)
+                          )}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-lg">{t(member.nameAr, member.nameEn)}</h4>
+                          <p className="text-primary text-sm">{t(member.degreeAr, member.degreeEn)}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-lg">{t(member.nameAr, member.nameEn)}</h4>
-                        <p className="text-primary text-sm">{t(member.degreeAr, member.degreeEn)}</p>
-                      </div>
+                      <p className="text-muted-foreground text-sm">
+                        {t(member.specializationAr, member.specializationEn)}
+                      </p>
                     </div>
-                    <p className="text-muted-foreground text-sm">
-                      {t(member.specializationAr, member.specializationEn)}
-                    </p>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </CardContent>

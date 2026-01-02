@@ -42,7 +42,7 @@ export default function Settings() {
                 </Label>
                 <Input
                   id="site-name"
-                  defaultValue={t('جامعة الجيل الجديد', 'New Generation University')}
+                  defaultValue={t('جامعة الجيل الجديد', 'Al JEEL AL JADEED UNIVERSITU')}
                 />
               </div>
               <div className="space-y-2">
@@ -122,7 +122,7 @@ export default function Settings() {
                 <Label htmlFor="uni-name-en">
                   {t('اسم الجامعة (إنجليزي)', 'University Name (English)')}
                 </Label>
-                <Input id="uni-name-en" defaultValue="New Generation University" />
+                <Input id="uni-name-en" defaultValue="Al JEEL AL JADEED UNIVERSITU" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="uni-address">

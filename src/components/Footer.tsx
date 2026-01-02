@@ -100,9 +100,9 @@ export const Footer = () => {
               </motion.div>
               <div>
                 <h3 className="text-2xl font-display font-bold text-secondary">
-                  {t('جامعة الجيل الجديد', 'New Generation University')}
+                  {t('جامعة الجيل الجديد', 'Al JEEL AL JADEED UNIVERSITU')}
                 </h3>
-                <p className="text-sm text-primary-foreground/70">NGU</p>
+                <p className="text-sm text-primary-foreground/70">AAU</p>
               </div>
             </motion.div>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md">
@@ -207,7 +207,7 @@ export const Footer = () => {
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
           >
-            © {currentYear} {t('جامعة الجيل الجديد. جميع الحقوق محفوظة.', 'New Generation University. All rights reserved.')}
+            © {currentYear} {t('جامعة الجيل الجديد. جميع الحقوق محفوظة.', 'Al JEEL AL JADEED UNIVERSITU. All rights reserved.')}
           </motion.p>
         </motion.div>
       </div>

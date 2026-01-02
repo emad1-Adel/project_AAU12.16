@@ -54,7 +54,7 @@ const About = () => {
 
         <div className="mb-16 text-center animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            {t('عن جامعة الجيل الجديد', 'About New Generation University')}
+            {t('عن جامعة الجيل الجديد', 'About Al JEEL AL JADEED UNIVERSITU')}
           </h1>
           <div className="w-24 h-1 bg-secondary mx-auto"></div>
         </div>
@@ -64,7 +64,7 @@ const About = () => {
             <p className="text-lg leading-relaxed text-muted-foreground">
               {t(
                 'جامعة الجيل الجديد هي مؤسسة تعليمية رائدة تأسست برؤية طموحة لتقديم تعليم عالي الجودة يواكب متطلبات العصر الحديث. نحن نؤمن بأن التعليم هو المفتاح الأساسي لبناء مستقبل أفضل للأجيال القادمة.',
-                'New Generation University is a leading educational institution founded with an ambitious vision to provide high-quality education that meets the requirements of the modern era. We believe that education is the key to building a better future for generations to come.'
+                'Al JEEL AL JADEED UNIVERSITU is a leading educational institution founded with an ambitious vision to provide high-quality education that meets the requirements of the modern era. We believe that education is the key to building a better future for generations to come.'
               )}
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">

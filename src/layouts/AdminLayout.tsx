@@ -8,6 +8,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { adminRoutes } from '@/config/routes';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import ChatWidget from '@/components/ChatWidget';
 
 export const AdminLayout = () => {
   const { t } = useLanguage();
@@ -87,6 +88,8 @@ export const AdminLayout = () => {
           <Outlet />
         </div>
       </main>
+      {/* Chat widget available to admins/editors */}
+      <ChatWidget role="admin" />
     </div>
   );
 };

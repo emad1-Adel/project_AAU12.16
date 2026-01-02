@@ -1320,7 +1320,7 @@ export default function DoctorDashboard() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-display font-bold text-foreground mb-8">
-              {t('فريق العمل', 'Development Team')}
+              {t('', 'Development Team')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[

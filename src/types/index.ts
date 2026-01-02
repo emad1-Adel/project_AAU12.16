@@ -183,6 +183,14 @@ export interface College {
   admissionRequirementsEn: string;
   icon?: string;
   image?: string;
+  dean?: {
+    id?: string;
+    nameAr: string;
+    nameEn: string;
+    titleAr?: string;
+    titleEn?: string;
+    image?: string;
+  };
 }
 
 export interface EventItem {

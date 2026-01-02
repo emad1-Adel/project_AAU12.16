@@ -119,7 +119,7 @@ export const HeroSection = () => {
             variants={itemVariants}
           >
             <GraduationCap className="w-4 h-4 text-secondary" />
-            {t('مرحباً بكم في جامعة الجيل الجديد', 'Welcome to New Generation University')}
+            {t('مرحباً بكم في جامعة الجيل الجديد', 'Welcome to Al JEEL AL JADEED UNIVERSITU')}
           </motion.div>
           
           <motion.h1 
@@ -127,7 +127,7 @@ export const HeroSection = () => {
             variants={itemVariants}
           >
             <span className="bg-gradient-to-r from-white via-secondary to-white bg-clip-text text-transparent">
-              {t('جامعة الجيل الجديد', 'New Generation')}
+              {t('جامعة الجيل الجديد', 'Al JEEL AL JADEED UNIVERSITU')}
             </span>
             <br />
             <span className="text-secondary">{t('', 'University')}</span>

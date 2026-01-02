@@ -43,9 +43,9 @@ const mockCenters: CenterItem[] = [
   },
   {
     id: 'consulting',
-    titleAr: 'مركز الاستشارات',
+    titleAr: 'مركز الجودة',
     titleEn: 'Consulting Center',
-    descAr: 'خدمات استشارية متخصصة للمؤسسات والأفراد',
+    descAr: '',
     descEn: 'Specialized consulting services for institutions and individuals',
     services: [
       { ar: 'استشارات إدارية', en: 'Management consulting' },

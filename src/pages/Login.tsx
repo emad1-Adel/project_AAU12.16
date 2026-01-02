@@ -43,11 +43,11 @@ export default function Login() {
   };
 
   const teamMembers = [
-    'البراء نشوان نعمان',
-    'أسامة محمد الرجوي',
-    'رياض محمد الروحاني',
-    'عماد عادل الكوكباني',
-    'حمزة منصور الحرازي',
+    '',
+    '',
+    '',
+    '',
+    '',
   ];
 
   return (
@@ -95,7 +95,7 @@ export default function Login() {
                       <User className="w-10 h-10 text-secondary" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      {t('تسجيل دخول الدكتور', 'Teacher Login')}
+                      {t('تسجيل دخول اعضاء هيئة التدريس', 'Teacher Login')}
                     </h3>
                     <p className="text-muted-foreground">
                       {t('لأعضاء هيئة التدريس', 'For faculty members')}
@@ -313,7 +313,7 @@ export default function Login() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-display font-bold text-foreground mb-8">
-              {t('فريق العمل', 'Our Team')}
+              {t('', 'Our Team')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {teamMembers.map((member, index) => (

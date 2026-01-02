@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 import { Breadcrumb } from '@/components/common/Breadcrumb';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Users, BookOpen, Award, GraduationCap } from 'lucide-react';
@@ -119,10 +120,31 @@ const Colleges = () => {
 
                 {/* College Name on Image */}
                 <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                    {t(college.nameAr, college.nameEn)}
-                  </h3>
-                  <div className="flex items-center gap-4 text-white/80 text-sm">
+                  <div className={`flex items-center justify-between gap-4 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                    <div className="flex-1 pr-4">
+                      <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2 drop-shadow-lg leading-tight">
+                        {t(college.nameAr, college.nameEn)}
+                      </h3>
+                    </div>
+
+                    {college.dean && (
+                      <Link to={`/faculty/${college.dean.id}`} className={`${language === 'ar' ? 'mr-4' : 'ml-4'} flex-none`} aria-label={t(college.dean.nameAr, college.dean.nameEn)}>
+                        <div className="w-20 md:w-24 h-48 md:h-56 bg-white/6 rounded-xl overflow-hidden border border-white/20 backdrop-blur-sm flex flex-col items-center text-center p-2 hover:shadow-xl transition-transform hover:scale-105">
+                          <div className="w-full h-28 md:h-36 overflow-hidden">
+                            <img src={college.dean.image} alt={t(college.dean.nameAr, college.dean.nameEn)} className="w-full h-full object-cover" />
+                          </div>
+                          <div className="flex-1 mt-3">
+                            <div className="text-sm md:text-base font-semibold text-white leading-tight drop-shadow">
+                              {t(college.dean.nameAr, college.dean.nameEn)}
+                            </div>
+                            <div className="text-xs text-white/80 mt-1">{t(college.dean.titleAr || 'عميد الكلية', college.dean.titleEn || 'Dean')}</div>
+                          </div>
+                        </div>
+                      </Link>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-4 text-white/80 text-sm mt-2">
                     <span className="flex items-center gap-1">
                       <BookOpen className="w-4 h-4" />
                       {college.programs?.length || 4} {t('برامج', 'Programs')}
@@ -140,6 +162,9 @@ const Colleges = () => {
                 <p className="text-muted-foreground mb-6 line-clamp-3">
                   {t(college.descriptionAr, college.descriptionEn)}
                 </p>
+
+                  {/* Dean Info */}
+                  {/* dean removed from colleges list as requested */}
 
                 {/* Programs Preview */}
                 <div className="mb-6">

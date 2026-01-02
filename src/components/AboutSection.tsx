@@ -106,7 +106,7 @@ export const AboutSection = () => {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             {t(
               'جامعة الجيل الجديد مؤسسة تعليمية رائدة تهدف إلى إعداد خريجين متخصصين ومؤهلين علميًا وتقنيًا للمساهمة في تنمية المجتمع',
-              'New Generation University is a leading educational institution that aims to prepare specialized and scientifically qualified graduates to contribute to community development'
+              'Al JEEL AL JADEED UNIVERSITU is a leading educational institution that aims to prepare specialized and scientifically qualified graduates to contribute to community development'
             )}
           </p>
         </motion.div>
@@ -182,7 +182,7 @@ export const AboutSection = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 {t(
                   'توفر جامعة الجيل الجديد بيئة تعليمية حديثة ومتطورة تشمل مختبرات مجهزة بأحدث التقنيات، مكتبة شاملة تحتوي على آلاف المراجع العلمية، وقاعات دراسية مريحة مصممة لتعزيز التفاعل والإبداع.',
-                  'New Generation University provides a modern and advanced educational environment including laboratories equipped with the latest technologies, a comprehensive library containing thousands of scientific references, and comfortable classrooms designed to enhance interaction and creativity.'
+                  'Al JEEL AL JADEED UNIVERSITU provides a modern and advanced educational environment including laboratories equipped with the latest technologies, a comprehensive library containing thousands of scientific references, and comfortable classrooms designed to enhance interaction and creativity.'
                 )}
               </p>
               <p className="text-muted-foreground leading-relaxed">

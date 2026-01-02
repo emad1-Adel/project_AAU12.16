@@ -44,6 +44,14 @@ const mockColleges: College[] = [
     admissionRequirementsEn: 'High school certificate scientific branch with a minimum of 78%',
     icon: 'Stethoscope',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=1200&q=80',
+    dean: {
+      id: 'd-medicine',
+      nameAr: 'د. سامر الحسن',
+      nameEn: 'Dr. Samer Hassan',
+      titleAr: 'عميد الكلية',
+      titleEn: 'Dean',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80'
+    },
   },
   {
     id: 'health-sciences',
@@ -151,6 +159,14 @@ const mockColleges: College[] = [
     admissionRequirementsEn: 'High school certificate scientific branch',
     icon: 'Heart',
     image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200&q=80',
+    dean: {
+      id: 'd-health',
+      nameAr: 'د. ليلى منصور',
+      nameEn: 'Dr. Laila Mansour',
+      titleAr: 'عميد الكلية',
+      titleEn: 'Dean',
+      image: 'https://images.unsplash.com/photo-1545996124-1c6a5c9b8f4a?w=200&q=80'
+    },
   },
   {
     id: 'engineering-it',
@@ -338,6 +354,14 @@ const mockColleges: College[] = [
     admissionRequirementsEn: 'High school certificate scientific branch',
     icon: 'Laptop',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80',
+    dean: {
+      id: 'd-engineering',
+      nameAr: 'د. كريم فؤاد الخطيب',
+      nameEn: 'Dr. Karim Fouad',
+      titleAr: 'عميد الكلية',
+      titleEn: 'Dean',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80'
+    },
   },
   {
     id: 'business-humanities',
